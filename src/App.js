@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import PDF from './assets/img/PDF.png'
 import './App.css';
+import PDFView from "./pdfView";
+import {useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isClickViewer, setIsClickViewer] = useState(false)
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={PDF} className="App-logo" alt="logo" onClick={() => setIsClickViewer(!isClickViewer)} />
+                { isClickViewer && <PDFView />}
+                <div className="textbox" style={{ marginTop: '50px' }}>
+                    <div style={{ marginBottom: '30px' }}>
+                        <b>Click PDF image!</b>
+                    </div>
+                    <div>Hope there should be <b>no error</b></div>
+                    <div>while downloading PDF example 🤣</div>
+                </div>
+            </header>
+        </div>
+    );
 }
 
 export default App;
