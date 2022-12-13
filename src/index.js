@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {PDFViewer} from "@react-pdf/renderer";
+import {PDFViewer, PDFDownloadLink} from "@react-pdf/renderer";
 
 import PageWrap from './pageWrap';
 
@@ -19,7 +19,11 @@ const Viewer = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Viewer />
+        <div>
+            <Viewer />
+            <PDFDownloadLink document={<PageWrap />}  fileName="test.pdf">
+                download test PDF
+            </PDFDownloadLink>
+        </div>
     </React.StrictMode>
-
 );
