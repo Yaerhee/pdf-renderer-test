@@ -8,6 +8,8 @@ import {
     StyleSheet,
 } from '@react-pdf/renderer';
 import PretendardBold from '../assets/fonts/Pretendard-Bold.ttf'
+import PretendardLight from '../assets/fonts/Pretendard-Light.ttf'
+import PretendardMedium from '../assets/fonts/Pretendard-Medium.ttf'
 
 const styles = StyleSheet.create({
     body: {
@@ -24,18 +26,18 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         marginBottom: 40,
-        fontFamily: 'PretendardBold',
+        fontFamily: 'PretendardLight',
     },
     subtitle: {
         fontSize: 18,
         margin: 12,
-        fontFamily: 'PretendardBold',
+        fontFamily: 'PretendardMedium',
     },
     text: {
         margin: 12,
         fontSize: 14,
         textAlign: 'justify',
-        fontFamily: 'PretendardBold',
+        fontFamily: 'PretendardLight',
     },
     image: {
         marginVertical: 15,
@@ -61,6 +63,16 @@ const styles = StyleSheet.create({
 Font.register({
     family: 'PretendardBold',
     src: PretendardBold,
+});
+
+Font.register({
+    family: 'PretendardMedium',
+    src: PretendardMedium,
+});
+
+Font.register({
+    family: 'PretendardLight',
+    src: PretendardLight,
 });
 
 const Subtitle = ({children, ...props}) => (
