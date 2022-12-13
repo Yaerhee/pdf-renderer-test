@@ -7,9 +7,9 @@ import {
     Image,
     StyleSheet,
 } from '@react-pdf/renderer';
-import PretendardBold from '../assets/fonts/Pretendard-Bold.ttf'
-import PretendardLight from '../assets/fonts/Pretendard-Light.ttf'
-import PretendardMedium from '../assets/fonts/Pretendard-Medium.ttf'
+import PretendardBold from './fonts/Pretendard-Bold.ttf'
+import PretendardLight from './fonts/Pretendard-Light.ttf'
+import PretendardMedium from './fonts/Pretendard-Medium.ttf'
 
 const styles = StyleSheet.create({
     body: {

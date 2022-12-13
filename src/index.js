@@ -4,6 +4,7 @@ import './index.css';
 import {PDFViewer, PDFDownloadLink} from "@react-pdf/renderer";
 
 import PageWrap from './pageWrap';
+import Render from "./render";
 
 const Viewer = () => {
     return (
@@ -24,6 +25,7 @@ root.render(
             <PDFDownloadLink document={<PageWrap />}  fileName="test.pdf">
                 download test PDF
             </PDFDownloadLink>
+            <Render />
         </div>
     </React.StrictMode>
 );
