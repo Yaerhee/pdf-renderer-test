@@ -75,12 +75,13 @@ Font.register({
     src: PretendardLight,
 });
 
-const Subtitle = ({children, ...props}) => (
+const Subtitle = ({children, ...props}: {children: any}) => (
     <Text style={styles.subtitle} {...props}>
         {children}
     </Text>
 );
 
+// @ts-ignore
 export default () => (
     <Document>
         <Page style={styles.body} wrap>
@@ -128,7 +129,7 @@ export default () => (
                 있습니다. 까닭이요, 어머니, 속의 이 별이 계십니다. 오는 사람들의 이름과, 헤일 아무 나의 아이들의 마디씩 멀리 있습니다. 하나에 나는 별 애기 멀리 이름자를 거외다. 무덤 아침이
                 하나의 하나 위에 비둘기, 내 딴은 별 있습니다. 무성할 하나에 패, 그리워 당신은 이런 북간도에 멀듯이, 아침이 봅니다. 프랑시스 많은 별 속의 자랑처럼 있습니다.
             </Text>
-            <Subtitle break>
+            <Subtitle>
                 흙으로 된 남은 까닭입니다. 프랑시스 걱정도 이런 거외다. 이제 부끄러운
                 라이너 노새, 까닭입니다.
             </Subtitle>
@@ -185,7 +186,7 @@ export default () => (
             </Text>
             <Text
                 style={styles.pageNumber}
-                render={({pageNumber, totalPages}) => `${pageNumber} / ${totalPages}`}
+                render={({pageNumber, totalPages} : {pageNumber: any, totalPages: any}) => `${pageNumber} / ${totalPages}`}
                 fixed
             />
         </Page>
